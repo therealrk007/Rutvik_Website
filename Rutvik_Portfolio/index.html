@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Rutvik Patel Portfolio</title>
+	<link href="img/2.png" rel="icon">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+body::-webkit-scrollbar{
+    display: none;
+  }
+  
+  html {
+    scrollbar-width: none;
+  }
+  body{
+    -ms-overflow-style: none;
+  }
+  
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+.skill-mf .title-s {
+	height: 20px;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+</style>
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300"> 
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Rutvik Patel</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" >
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Rutvik Patel</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'IT Executive',
+						'Designer  ',
+						'Web Developer  ',
+						'Freelancer   ',
+						'Photographer   ',
+						'Software Suppot Engineer',
+						'SoftWare Developer ',
+						'And More...',
+
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 200); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 200);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+						</script>
+						 <br>
+						<br>
+						<h3>A Web Developer, IT Executive  &amp; Software Support Engineer</h3>
+						<br>
+						<h4 id="experienceText" class="d-flex" style="margin-bottom: 0"></h4>
+
+						<!-- Experience calculation will be injected here -->
+<script>
+  // Set your job start date (Year, Month - 1, Day)
+  const startDate = new Date(2023, 3, 1); // March 1, 2023
+
+  function updateExperience() {
+    const now = new Date();
+    const diffMs = now - startDate;
+
+    // Total units
+    const totalSeconds = Math.floor(diffMs / 1000);
+    const totalMinutes = Math.floor(totalSeconds / 60);
+    const totalHours = Math.floor(totalMinutes / 60);
+
+    // Breakdown for years, months, and days
+    let tempDate = new Date(startDate.getTime());
+    let years = now.getFullYear() - tempDate.getFullYear();
+    let months = now.getMonth() - tempDate.getMonth();
+
+    if (months < 0) {
+      years--;
+      months += 12;
+    }
+
+    tempDate.setFullYear(tempDate.getFullYear() + years);
+    tempDate.setMonth(tempDate.getMonth() + months);
+
+    let days = Math.floor((now - tempDate) / (1000 * 60 * 60 * 24));
+
+    // Format final string
+    const experience = `With ${years} Year${years !== 1 ? 's' : ''} `
+      + `${months} Month${months !== 1 ? 's' : ''} `
+      + `${days} Day${days !== 1 ? 's' : ''}`
+    //   + `${totalHours} Hour${totalHours !== 1 ? 's' : ''}, `
+    //   + `${totalMinutes} Minute${totalMinutes !== 1 ? 's' : ''}, and `
+    //   + `${totalSeconds} Second${totalSeconds !== 1 ? 's' : ''}`;
+
+    // Inject into HTML
+    document.getElementById("experienceText").textContent = experience;
+  }
+
+  updateExperience(); // initial call
+  setInterval(updateExperience, 1000); // refresh every second
+</script>
+	<script>
+		// Disable right-click context menu
+		window.addEventListener('contextmenu', function (e) {
+			e.preventDefault();
+		});
+
+		// Disable copy-paste
+		document.addEventListener('copy', function (e) {
+			e.preventDefault();
+		});
+
+		document.addEventListener('cut', function (e) {
+			e.preventDefault();
+		});
+	</script>
+</head>
+
+<body>
+	<!--[if lte IE 9]>
+      <p class="browserupgrade">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="https://browsehappy.com/">upgrade your browser</a> to improve
+        your experience and security.
+      </p>
+    <![endif]-->
+
+	<!-- ========================= preloader start ========================= -->
+	<div class="preloader">
+		<div class="loader">
+			<div class="spinner">
+				<div class="spinner-container">
+					<div class="spinner-rotator">
+						<div class="spinner-left">
+							<div class="spinner-circle"></div>
+						</div>
+						<div class="spinner-right">
+							<div class="spinner-circle"></div>
+						</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- preloader end -->
+						<!--<h3 class="d-flex" style="margin-bottom: 0">With 1 Years 1 Month of experience</h3> -->
+						<br>
+			            <p><a href="Rutvik_Resume/Rutvik's Resume_2025.pdf" class="btn btn-primary py-3 px-4" target="_blank">Download Resume</a> 
+							<a href="https://github.com/therealrk007" class="btn btn-white btn-outline-white py-3 px-4" target="_blank">My works</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									 <div class="col-sm-6 col-md-5">
+									  	<div class="about-img">
+										<img src="img/IMG_20230216_164745.jpg" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Rutvik Patel</span></p>
+										<p><span class="title-s">Job Role &amp; Experience: </span> <span>As Above Mentioned</span></p>
+										<p><span class="title-s">Email: </span> <span><a href="mailto:rutvik10.sd@gmail.com">rutvik10.sd@gmail.com</a></span></p>
+										<p><span class="title-s">Address: </span> <span>Navsari, Gujarat, India</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s text-center">Skills</p>
+									<p class="text-center underline "></p>
+									<span>HTML </span> <span class="pull-right">100%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>CSS </span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									<span>JavaScript </span> <span class="pull-right">75%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									
+									<span>PHP </span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>WordPress/CMS </span> <span class="pull-right">30%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 30%" aria-valuenow="30" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>		
+								</div>
+							</div>
+						</div>
+					</div>		
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>	
+								<p>Hey,<br>This Is Rutvik Patel. I am From Navsari,Gujarat.<br>I'm an IT Executive,Web Devloper,Freelancer and also a Photographer. <br> I Greduate My Bachlor's
+									Degree (Bachlor Of Vocation in Software Development) From <a href="https://rngpit.ac.in/">R.N.G.Patel Institute of Technology,Isroli</a>.
+									<br>I Greduate My Master's Degree (Master of Science In Information Technology) <a href="https://baou.edu.in/">BABA Sahab Ambedkar Open University, Ahmdabad</a>.
+									<br>Also Serving Services as a Jr. Web Developer in <a href="http://restalgo.com">RestAlgo Technology Private Limited</a>.
+									<br>Previously Worked As Software Support Engineer in <a href="https://www.deverp.com/">DevERP Solutions Private Limited</a>.
+									<br>Currently Wokrling As an IT Executive in <a href="https://skytextiles.in//">SKY TEXTILE INDIA PVT LTD</a>.
+								</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Jr. Web Developer &amp; Software Support Engineer</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Web, Designing, Customer Support &amp; Digital Marketing</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Bachlor of Vocation in Software Development</span></li>
+									<li class="d-flex"><span></span> <span>Masters of Scient In Information Technology</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English, Hindi, Gujarati</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>ASP.NET, ASP.NET MVC, C#, Git &amp; SEO</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Travel Photography, Learning</span></li>
+									<li class="d-flex"><span>Freelance:</span> <span>Available</span></li>
+									
+								</ul>
+							</div>
+						</div>
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="8">0</span> <span>+</span>
+									<span>&nbsp; Projects Completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/therealrk007/" class="btn btn-primary py-3 px-3 ">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p></p>
+          </div>
+        </div>
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>		
+		<div class="row">
+		    	<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">SKY TEXTILE INDIA PVT LTD</span>
+					<h2>IT Executive</h2>
+					<span class="position">May 2026 - Present</span>
+					<p class="mt-4">Providing a one-stop solution for all your textile and garment needs. From sourcing the finest cotton to delivering high-quality finished garments, our vertical setup ensures seamless production, reducing both costs and lead times. By streamlining the entire process under one roof, we eliminate the need for multiple vendors and minimize transportation delays, allowing for quicker, more efficient service.
+						<ul>
+							<li>Reliable foundations for Fabrics From Yarns.</li>
+							<li>Engineered for softness and durability For Fabrics.</li>
+						    <li>Precision-crafted for international markets With Garments.</li>
+						    <li>Experience exceptional quality, reliable service, and full transparency in every step we take to bring you the best quality textiles in the industry.</li>
+						</ul>
+					</p>
+				</div>
+
+			</div>
+			<div class="col-md-6">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">DevERP Solutions Private Limited</span>
+					<h2>Jr. Software Support Engineer</h2>
+					<span class="position">May 2024 - May 2026</span>
+					<p class="mt-4">DevERP Solutions Pvt. Ltd. is a custom software development firm located in Ahmedabad, India. We offer custom software programming services, from offshore software development to technology consulting. We take pride in delivering customized and next-generation enterprise solutions based on your business needs.  
+						<ul>
+							<li>Provide solutions to technical problems, ensuring minimal disruption to business operations.</li>
+							<li>Escalate complex issues to higher-level support or development teams when necessary.</li>
+							<li>Assist users with software-related queries and provide guidance on using applications effectively.</li>
+						</ul>
+					</p>
+				</div>
+
+			</div>
+
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">RestAlgo Tech Private Limited</span>
+						<h2>Jr. Web Developer</h2>
+						<span class="position">Oct 2023 - April 2024</span>
+						<p class="mt-4">RestAlgo Tech Private Limited Is new-age Software Company, dedicated to provide world-wide cutting-edge and tailored solutions for all types of businesses.  
+							<ul>
+								<li>Analysed ad campaigns, clickstream, and customer surveys data, identified an increasing demand and launched a strategic product line.</li>
+								<li>Developed time series forecasting models to predict sales and optimize marketing budgets, got model performance of 92%.</li>
+								<li>Designed and executed A/B tests, performed rigorous statistical analysis. Led to 20% MoM increase in the conversion rate.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+				<div class="col-md-6">
+					<div class="resume-wrap ftco-animate">
+						<span class="date">RestAlgo Tech Private Limited</span>
+						<h2>Web Developer Intern</h2>
+						<span class="position">March 2023 - Oct 2023</span>
+						<p class="mt-4">RestAlgo Tech Private Limited Is new-age Software Company, dedicated to provide world-wide cutting-edge and tailored solutions for all types of businesses. 
+							<ul>
+								<li>Performed in-depth market research and analysis to create online pages. Resulted in ~100% website growth and 30% increase in conversion rate YoY.</li>
+								<li>Delivered multiple training and mentorship sessions on analytical tools like SQL, MS Excel, Power BI, Tableau and Python.</li>
+								<li>Performed migration and enhancements for merchandising dashboard, involved data integration and its feature improvement.</li>
+							</ul>
+						</p>
+					</div>
+
+				</div>
+		</div>
+		<br>
+		<br>
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>	
+			<div class="row">
+				<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">BABA Sahab Ambedkar Open University, Ahmdabad, Gujarat</span>
+    					<h3>Masters In Information Technology</h3>
+    					<span class="position">Aug 2021 - March 2026</span>
+    					<p class="mt-4">Grade: <b>6.23 CGPA (PASS)</b></p>
+    				</div>
+				</div>
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">R.N.G. Patel Institue of Technology, Isroli, Bardoli, Surat, Gujarat</span>
+    					<h3>Bachelor of Vocation in Software Development</h3>
+    					<span class="position">July 2018 - Aug 2021</span>
+    					<p class="mt-4">Grade: <b>7.5 CGPA (PASS)</b></p>
+    				</div>
+    			</div>		
+    		</div>
+    		<div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="Rutvik_Resume/Rutvik's Resume_2025.pdf" class="btn btn-primary py-4 px-5">Download Resume</a></p>
+    			</div>
+    		</div>
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Website projects on Company Website & My Personal Websites Projects</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://therealrk007.github.io/vexorphiousesports.in/" target="_blank" class="block-20 zoom-effect" style="background-image: url('img/proj_1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://therealrk007.github.io/vexorphiousesports.in/" target="_blank">Website For Esport Team</a></h3>
+                <p>Made Website for Big Esports Gaming Organization.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://therealrk007.github.io/E-Books-Are-Free/"  target="_blank" class="block-20 zoom-effect" style="background-image: url('img/proj_2.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://therealrk007.github.io/E-Books-Are-Free/" target="_blank">Website On E-Books (Collage Project)</a></h3>
+                <p>This Website give tou free books for class 11,12 and Collage students</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry">
+              <a href="https://therealrk007.github.io/Rutvik-On-Social/" target="_blank" class="block-20 zoom-effect" style="background-image: url('img/proj_3.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+                <h3 class="heading"><a href="https://therealrk007.github.io/Rutvik-On-Social/" target="_blank">Website Like Linktree Profile(Personal Project)</a></h3>
+                <p>Website connects To Your socials links at One Place</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+		<div class="row d-flex justify-content-center">  
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://restalgo.com" target="_blank" class="block-20 zoom-effect" style="background-image: url('img/proj_4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://restalgo.com" target="_blank">Website For Company Name Restalgo Tech Private Limited</a></h3>
+				  <p>Show you details for Startup company named Restalgo Tech Private Limited what they Do.</p>
+				</div>
+			  </div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://gratiasgroup.com/"target="_blank"  class="block-20 zoom-effect" style="background-image: url('img/proj_1.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://gratiasgroup.com/" target="_blank">Website for Gratias Venture Private Limited</a></h3>
+				  <p>Show you details for Startup company named Gratias Venture Private Limited what they Do..</p>
+				</div>
+			  </div>
+			</div>
+			<!-- <div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/rutvikpatel1999/TEPL_Website" class="block-20 zoom-effect" style="background-image: url('img/proj_5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+  
+				  <h3 class="heading"><a href="https://github.com/rutvikpatel1999/TEPL_Website">Website for Tirshil Algocomm Technologies Limited</a></h3>
+				  <p>Show you details for Startup company named Tirshil Algocomm Technologies Limited what they Do..</p>
+				</div>
+			  </div>
+			</div> -->
+		 </div>
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Happy Clients</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="8">0</strong>
+                <span>Projects Done</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="100">0</strong>
+                <span>Hours Of Support</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="2">0</strong>
+                <span>Project In Proccess</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(img/bg_1.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More Projects On <span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/therealrk007" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the Details to Reach Out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Navsari, Gujarat, India</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel:+917043872868">+91 7043872868</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:rutvik10.sd@gmail.com">rutvik10.sd@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="Rutvik_Resume/Rutvik's Resume_2025.pdf" target="_blank">Rutvik Patel Resume</a></p>
+	          </div>
+          </div>
+
+		  <div class="container">
+			<br>
+			<br>
+			<div class="row justify-content-center">
+				<div class="col-md-7 ftco-animate text-center">
+				  <h2>Have a<span> Question?  </span > <a href="form.php" class="btn btn-primary py-3 px-5" target="_blank">Click Here</a> </h2>
+					<!---<h2> <a href="mail.php" style="text-decoration: none" class="btn btn-primary py-3 px-5">WORK TOGETHER</a> </h2>-->
+				</div>
+			</div>
+				<br>
+					<ul class="ftco-footer-social list-unstyled d-flex justify-content-center align-items-center mb-0">
+					  <li class="ftco-animate normal-txt">Find Me On  </li>
+					  <!-- <li class="ftco-animate"><a href="https://www.youtube.com/@RishabhMishraOfficial" target="_blank"><span class="icon-youtube"></span></a></li> -->
+					  <li class="ftco-animate"><a href="https://www.linkedin.com/in/therealrk007/" target="_blank"><span class="icon-linkedin"></span></a></li>  
+					  <li class="ftco-animate"><a href="https://x.com/therealrk007" target="_blank"><span class="icon-twitter"></span></a></li>
+					  <li class="ftco-animate"><a href="https://facebook.com/therealrk007" target="_blank"><span class="icon-facebook"></span></a></li>
+				      <li class="ftco-animate"><a href="https://www.instagram.com/therealrk007/" target="_blank"><span class="icon-instagram"></span></a></li>
+					</ul>
+				<br>
+		   </div>
+   </div>
+ </section>
+
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p>Copyright &copy;<script>document.write(new Date().getFullYear());</script> All Rights Reserved  <i class="icon-heart color-danger" aria-hidden="true"></i> by 
+			  <a href="https://rutvikpatel.in/" target="_blank">Rutvik Patel</a>
+	</p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen">
+	<svg class="circular" width="48px" height="48px">
+		<circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/>
+		<circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/>
+	</svg>
+</div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="js/main.js"></script>
+  <script type="text/javascript">window.$crisp=[];window.CRISP_WEBSITE_ID="fd9e15e1-91d9-44ee-94cb-dba8d9a2bc2b";
+  (function(){d=document;s=d.createElement("script");s.src="https://client.crisp.chat/l.js";s.async=1;d.
+  getElementsByTagName("head")[0].appendChild(s);})();</script>
+  <!--<iframe src="/chatbot_pro4/index.html"style="position:fixed;bottom:20px;right:20px;width:330px;height:480px;border:none;z-index:9999;"
+  title="Chatbot"></iframe>-->
+
+  </body>
+</html>

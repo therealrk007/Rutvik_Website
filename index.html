@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link href="/img/2.png" rel="icon">
+<title>Rutvik's Linktree</title>
+
+<style>
+    :root {
+        --bg: #0e0e0e;
+        --text: #ffffff;
+        --card: rgba(255,255,255,0.08);
+        --accent: #6a5acd;
+        --glow: 0 0 15px var(--accent);
+    }
+
+    /* LIGHT THEME */
+    .light {
+        --bg: #f5f5f5;
+        --text: #111;
+        --card: rgba(0,0,0,0.06);
+        --accent: #4a47d5;
+        --glow: 0 0 10px var(--accent);
+    }
+
+    /* NEON THEME */
+    .neon {
+        --bg: #050505;
+        --text: #00eaff;
+        --card: rgba(0,255,255,0.08);
+        --accent: #00eaff;
+        --glow: 0 0 20px var(--accent);
+    }
+
+    /* GLASS THEME */
+    .glass {
+        --bg: url('https://images.unsplash.com/photo-1503264116251-35a269479413?auto=format&fit=crop&w=900&q=60');
+        --text: #ffffff;
+        --card: rgba(255,255,255,0.18);
+        --accent: #ffffff;
+        --glow: 0 0 15px var(--accent);
+        backdrop-filter: blur(10px);
+    }
+
+    body {
+        background: var(--bg);
+        background-size: cover;
+        background-position: center;
+        color: var(--text);
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        transition: 0.4s ease;
+    }
+
+    .container {
+        max-width: 450px;
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 130px;
+        height: 130px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 3px solid var(--accent);
+        box-shadow: var(--glow);
+    }
+
+    h1 { margin: 15px 0 5px; font-size: 28px; }
+    .bio { opacity: 0.8; margin-bottom: 25px; }
+
+    .btn {
+        display: block;
+        padding: 15px;
+        margin: 12px 0;
+        border-radius: 12px;
+        background: var(--card);
+        border: 1px solid var(--accent);
+        text-decoration: none;
+        color: var(--text);
+        font-size: 18px;
+        transition: transform .25s, box-shadow .3s;
+    }
+
+    .btn:hover {
+        transform: translateY(-4px) scale(1.02);
+        box-shadow: var(--glow);
+    }
+
+    .theme-selector {
+        margin-top: 25px;
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+    }
+
+    .theme-btn {
+        padding: 8px 16px;
+        border-radius: 8px;
+        background: var(--card);
+        border: 1px solid var(--accent);
+        cursor: pointer;
+        color: var(--text);
+        transition: .3s;
+    }
+
+    .theme-btn:hover { box-shadow: var(--glow); }
+
+    .toggle-dark {
+        margin-top: 20px;
+        padding: 10px 18px;
+        border-radius: 10px;
+        cursor: pointer;
+        font-size: 15px;
+        border: 1px solid var(--accent);
+        background: var(--card);
+        color: var(--text);
+        transition: .3s;
+    }
+
+    .toggle-dark:hover { box-shadow: var(--glow); }
+
+</style>
+
+</head>
+<body>
+
+<div class="container">
+
+    <img src="/img/IMG_20230216_164745.jpg" class="profile-img">
+
+    <h1>Rutvik Patel</h1>
+    <p class="bio">Software Support Engineer | Software Developer | Freelancer ✨</p>
+
+    <!-- Links -->
+    <a class="btn" href="https://portfolio.rutvikpatel.in" target="_blank">🌐 Portfolio</a>
+    <a class="btn" href="https://contactme.rutvikpatel.in/" target="_blank">📞 Contact Me</a>
+    <a class="btn" href="https://socials.rutvikpatel.in/" target="_blank">🗣️ Social</a>
+    <a class="btn" href="mailto:contect@rutvikpatel.in" target="_blank">📧 Email Me</a>
+
+    <!-- Theme Buttons -->
+    <div class="theme-selector">
+        <button class="theme-btn" onclick="setTheme('light')">Light</button>
+        <button class="theme-btn" onclick="setTheme('neon')">Neon</button>
+        <button class="theme-btn" onclick="setTheme('glass')">Glass</button>
+        <button class="theme-btn" onclick="setTheme('dark')">Dark</button>
+    </div>
+
+    <!-- Dark/Light Toggle -->
+    <button class="toggle-dark" onclick="toggleDarkMode()">Toggle Dark / Light</button>
+
+</div>
+
+<script>
+    function setTheme(theme) {
+        document.body.className = theme === "dark" ? "" : theme;
+    }
+
+    function toggleDarkMode() {
+        document.body.classList.toggle("light");
+    }
+</script>
+
+</body>
+</html>
